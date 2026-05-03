@@ -9,7 +9,7 @@ function Header({ content, language, onToggleLanguage }) {
           className="text-sm font-bold uppercase tracking-[0.25em] text-slate-50"
         >
           <span className="hidden sm:inline">{siteConfig.brandName}</span>
-          <span className="sm:hidden">Mendes</span>
+          <span className="sm:hidden">MENDES I.S.</span>
         </a>
 
         <nav className="hidden items-center gap-8 text-sm text-slate-300 lg:flex">

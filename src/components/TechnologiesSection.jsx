@@ -1,7 +1,7 @@
 import SectionHeader from "./SectionHeader"
 import TechnicalIcon from "./TechnicalIcon"
 
-const TECHNOLOGY_ICONS = ["code", "mobile", "chip", "database", "sensor"]
+const TECHNOLOGY_ICONS = ["code", "monitor", "mobile", "chip", "sensor", "cloud"]
 
 function TechnologiesSection({ content }) {
   return (
