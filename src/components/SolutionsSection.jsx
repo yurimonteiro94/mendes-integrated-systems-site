@@ -1,4 +1,16 @@
 import SectionHeader from "./SectionHeader"
+import TechnicalIcon from "./TechnicalIcon"
+
+const SOLUTION_ICONS = [
+  "mobile",
+  "chart",
+  "prototype",
+  "automation",
+  "monitor",
+  "cloud",
+  "sensor",
+  "tools",
+]
 
 function SolutionsSection({ content }) {
   return (
@@ -16,8 +28,11 @@ function SolutionsSection({ content }) {
               className="group rounded-2xl border border-slate-700/70 bg-slate-950/60 p-5 transition hover:-translate-y-1 hover:border-sky-400/40 hover:bg-slate-950"
             >
               <div className="mb-4 flex items-center gap-3">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-sky-400/10 text-xs font-bold text-sky-300 ring-1 ring-sky-400/20">
-                  {String(index + 1).padStart(2, "0")}
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-400/10 text-sky-300 ring-1 ring-sky-400/20">
+                  <TechnicalIcon
+                    name={SOLUTION_ICONS[index] ?? "tools"}
+                    className="h-5 w-5"
+                  />
                 </span>
 
                 <span className="h-px flex-1 bg-gradient-to-r from-sky-400/30 to-transparent" />

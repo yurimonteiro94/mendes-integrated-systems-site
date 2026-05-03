@@ -1,4 +1,14 @@
 import SectionHeader from "./SectionHeader"
+import TechnicalIcon from "./TechnicalIcon"
+
+const PROCESS_ICONS = [
+  "workflow",
+  "tools",
+  "prototype",
+  "code",
+  "chart",
+  "document",
+]
 
 function ProcessSection({ content }) {
   return (
@@ -18,14 +28,23 @@ function ProcessSection({ content }) {
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/50 to-transparent" />
 
               <div className="flex items-start gap-5">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-400/10 text-sm font-bold text-sky-300 ring-1 ring-sky-400/30">
-                  {String(index + 1).padStart(2, "0")}
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300 ring-1 ring-sky-400/30">
+                  <TechnicalIcon
+                    name={PROCESS_ICONS[index] ?? "workflow"}
+                    className="h-6 w-6"
+                  />
                 </span>
 
                 <div>
-                  <h3 className="text-lg font-bold text-slate-50">
-                    {step.title}
-                  </h3>
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-lg font-bold text-slate-50">
+                      {step.title}
+                    </h3>
+
+                    <span className="text-xs font-bold text-sky-400/70">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
 
                   <p className="mt-3 text-sm leading-6 text-slate-400">
                     {step.description}

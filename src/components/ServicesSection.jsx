@@ -1,4 +1,7 @@
 import SectionHeader from "./SectionHeader"
+import TechnicalIcon from "./TechnicalIcon"
+
+const SERVICE_ICONS = ["chip", "code", "mobile", "cloud"]
 
 function ServicesSection({ content }) {
   return (
@@ -16,12 +19,20 @@ function ServicesSection({ content }) {
               key={service.title}
               className="group rounded-3xl border border-sky-400/15 bg-slate-900/70 p-6 shadow-2xl shadow-sky-950/20 transition hover:-translate-y-1 hover:border-sky-400/40 hover:bg-slate-900"
             >
-              <div className="mb-6 flex items-center justify-between">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-400/10 text-sm font-bold text-sky-300 ring-1 ring-sky-400/30">
-                  {String(index + 1).padStart(2, "0")}
+              <div className="mb-6 flex items-center justify-between gap-4">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300 ring-1 ring-sky-400/30">
+                  <TechnicalIcon
+                    name={SERVICE_ICONS[index] ?? "chip"}
+                    className="h-6 w-6"
+                  />
                 </span>
 
-                <span className="h-px flex-1 bg-gradient-to-r from-sky-400/40 to-transparent" />
+                <div className="flex flex-1 items-center gap-3">
+                  <span className="h-px flex-1 bg-gradient-to-r from-sky-400/40 to-transparent" />
+                  <span className="text-xs font-bold text-sky-400/80">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
               </div>
 
               <h3 className="text-lg font-bold text-slate-50">

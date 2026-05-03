@@ -1,3 +1,4 @@
+import profileImage from "../assets/yuri-profile.png"
 import { siteConfig } from "../data/siteConfig"
 
 function AboutSection({ content }) {
@@ -11,6 +12,14 @@ function AboutSection({ content }) {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(56,189,248,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(56,189,248,0.05)_1px,transparent_1px)] bg-[size:48px_48px] opacity-40" />
 
             <div className="relative">
+              <div className="mb-7 overflow-hidden rounded-3xl border border-sky-400/20 bg-slate-900">
+                <img
+                  src={profileImage}
+                  alt="Yuri Barbosa Mendes Monteiro"
+                  className="h-80 w-full object-cover object-center"
+                />
+              </div>
+
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">
                 {siteConfig.brandName}
               </p>

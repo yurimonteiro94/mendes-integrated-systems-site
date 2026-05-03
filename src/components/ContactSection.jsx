@@ -1,6 +1,9 @@
 import { useState } from "react"
 import { siteConfig } from "../data/siteConfig"
 import { getContactInfo } from "../services/contactService"
+import TechnicalIcon from "./TechnicalIcon"
+
+const CONTACT_ITEM_ICONS = ["tools", "prototype", "chip", "cloud"]
 
 function ContactSection({ content }) {
   const [loadingContactType, setLoadingContactType] = useState(null)
@@ -130,8 +133,11 @@ function ContactSection({ content }) {
                 key={`${index}-${item}`}
                 className="flex items-center gap-3 rounded-2xl border border-slate-700/70 bg-slate-900/70 p-4"
               >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-sky-400/10 text-xs font-bold text-sky-300 ring-1 ring-sky-400/20">
-                  {String(index + 1).padStart(2, "0")}
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-sky-400/10 text-sky-300 ring-1 ring-sky-400/20">
+                  <TechnicalIcon
+                    name={CONTACT_ITEM_ICONS[index] ?? "tools"}
+                    className="h-5 w-5"
+                  />
                 </span>
 
                 <p className="text-sm font-medium text-slate-300">

@@ -1,4 +1,7 @@
 import SectionHeader from "./SectionHeader"
+import TechnicalIcon from "./TechnicalIcon"
+
+const TECHNOLOGY_ICONS = ["code", "mobile", "chip", "database", "sensor"]
 
 function TechnologiesSection({ content }) {
   return (
@@ -15,18 +18,23 @@ function TechnologiesSection({ content }) {
               key={group.title}
               className="group rounded-3xl border border-sky-400/15 bg-slate-900/70 p-6 transition hover:-translate-y-1 hover:border-sky-400/40 hover:bg-slate-900"
             >
-              <div className="mb-6 flex items-center justify-between">
+              <div className="mb-6 flex items-center gap-4">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300 ring-1 ring-sky-400/30">
+                  <TechnicalIcon
+                    name={TECHNOLOGY_ICONS[index] ?? "code"}
+                    className="h-6 w-6"
+                  />
+                </span>
+
                 <div>
                   <span className="text-xs font-bold text-sky-400">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <h3 className="mt-2 text-lg font-bold text-slate-50">
+                  <h3 className="mt-1 text-lg font-bold text-slate-50">
                     {group.title}
                   </h3>
                 </div>
-
-                <div className="h-10 w-10 rounded-2xl border border-sky-400/20 bg-sky-400/10" />
               </div>
 
               <div className="flex flex-wrap gap-2">
