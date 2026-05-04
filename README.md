@@ -1,16 +1,76 @@
-# React + Vite
+# Mendes Integrated Systems Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for **Mendes Integrated Systems**, a technical consultancy focused on software, hardware, firmware, embedded systems, mobile applications, web platforms, cloud integration and complete technical solutions.
 
-Currently, two official plugins are available:
+The website is designed as a professional landing page to present the company, its technical capabilities, service areas and contact channels.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Website
 
-## React Compiler
+https://mendes-integrated-systems-site.web.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Main Features
 
-## Expanding the ESLint configuration
+- Professional bilingual landing page in Portuguese and English
+- Responsive design for desktop, tablet and mobile
+- Dark technical visual identity inspired by embedded systems and circuit design
+- Service sections for embedded systems, firmware, mobile/web integration and technical consulting
+- Technical capabilities section organized by engineering layers
+- Firebase Realtime Database integration for contact information
+- Firebase Hosting deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- Firebase Hosting
+- Firebase Realtime Database
+- JavaScript
+
+## Project Structure
+
+```text
+src/
+  assets/
+  components/
+  data/
+  services/
+```
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Deployment
+
+The project is deployed using Firebase Hosting.
+
+```bash
+firebase deploy --only hosting
+```
+
+## Maintainer
+
+Developed and maintained by **Yuri Barbosa Mendes Monteiro**.
